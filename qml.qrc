@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>BazaOborudovania.qml</file>
+        <file>Statistica.qml</file>
+        <file>BazaIzmereni.qml</file>
+        <file>BazaOborudovania1.qml</file>
+        <file>BazaOborudovania1Form.ui.qml</file>
+        <file>BazaOborudovania2.qml</file>
+        <file>BazaOborudovania2Form.ui.qml</file>
+        <file>BazaOborudovania3.qml</file>
+        <file>BazaOborudovania3Form.ui.qml</file>
+        <file>BazaOborudovania4.qml</file>
+        <file>BazaOborudovania4Form.ui.qml</file>
+        <file>BazaOborudovaniaCreat.qml</file>
+        <file>BazaOborudovaniaCreat1.qml</file>
+        <file>BazaOborudovaniaCreat1Form.ui.qml</file>
+        <file>BazaOborudovaniaCreat2.qml</file>
+        <file>BazaOborudovaniaCreat2Form.ui.qml</file>
+        <file>BazaOborudovaniaCreat3.qml</file>
+        <file>BazaOborudovaniaCreat3Form.ui.qml</file>
+        <file>BazaOborudovaniaCreat4.qml</file>
+        <file>BazaOborudovaniaCreat4Form.ui.qml</file>
+    </qresource>
+</RCC>
