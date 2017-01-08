@@ -13,7 +13,7 @@ ApplicationWindow {
     width: Screen.desktopAvailableWidth
     height: Screen.desktopAvailableHeight
     visible: true
-    visibility: Window.FullScreen
+    //visibility: Window.FullScreen
     title: "VibroDataBase"
 
     ToolBar {
