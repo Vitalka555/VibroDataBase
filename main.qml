@@ -5,7 +5,7 @@ import QtQuick.Controls.Styles 1.4
 //import QtQuick.Controls.Material 2.0
 //import QtQuick.Controls.Universal 2.0
 import Qt.labs.settings 1.0
-import QtQuick.Window 2.0
+import QtQuick.Window 2.2
 
 
 ApplicationWindow {
@@ -13,6 +13,7 @@ ApplicationWindow {
     width: Screen.desktopAvailableWidth
     height: Screen.desktopAvailableHeight
     visible: true
+    visibility: Window.FullScreen
     title: "VibroDataBase"
 
     ToolBar {

@@ -7,7 +7,7 @@ Item {
         anchors.fill: parent
         Rectangle {
             id: rec1
-            z:1
+            z: 1
             anchors.left: parent.left            
             anchors.top: parent.top            
             height: item1.height
@@ -16,7 +16,7 @@ Item {
             border.width: 2
             border.color: "#353637"
             Row{
-                id: row1
+                id: row1                
                 anchors.left: rec1.left
                 anchors.leftMargin: 5
                 anchors.right: rec1.right
@@ -24,7 +24,7 @@ Item {
                 anchors.top: rec1.top
                 anchors.topMargin: 5
                 height: 40
-                spacing: 5
+                spacing: 5                
                 TextField {
                     id: tf1
                     width: 200
@@ -49,7 +49,7 @@ Item {
             /* Область списка */
             Rectangle {
                 id: rec2
-                color: "white"
+                color: "transparent"
                 border.width: 1
                 border.color: "#353637"
                 width: rec1.width - 10
@@ -58,31 +58,31 @@ Item {
                 anchors.top: row1.bottom
                 anchors.topMargin: 5
                 anchors.bottom: row2.top
-                anchors.bottomMargin: 5
+                anchors.bottomMargin: 5                
                 Flickable {
                     id: view
-                    width: list.width
+                    width: rec2.width
                     anchors.fill: parent
-                    contentWidth: list.width
+                    contentWidth: rec2.width
                     ListView {
                         id: list
                         width: rec2.width
                         height: rec2.height
                         anchors.fill: parent
+                        clip: true
                         model: QueryModel1
                         delegate: numberDelegate
                         focus: true
                         headerPositioning: ListView.OverlayHeader
-                        spacing: 1
+                        spacing: 1                        
                         highlight: Rectangle {
-                            id: svet
-                                    z: -3
-                                    y: list.currentItem.y;
-                                    Behavior on y { SpringAnimation { spring: 2; damping: 0.1 } }
-                                    color: "#1E90FF"
+                            id: svet                                    
+                            y: list.currentItem.y;
+                            Behavior on y { SpringAnimation { spring: 2; damping: 0.1 } }
+                            color: "#1E90FF"
                         }
-                                highlightFollowsCurrentItem: true
-                                highlightMoveDuration : 100
+                            highlightFollowsCurrentItem: true
+                            highlightMoveDuration : 100
             }
                     Component {
                         id: numberDelegate
@@ -90,9 +90,7 @@ Item {
                             id: wrapper
                             property int number: index
                             width: ListView.view.width
-                            height: 40
-                            //anchors.topMargin: 300
-                            z: -1
+                            height: 40                            
                             property var view: ListView.view
                             property var isCurrent: ListView.isCurrentItem
                             Rectangle {
@@ -104,8 +102,7 @@ Item {
                                         view.currentIndex = model.index
                                         baza1.editEntry(list.currentIndex)
                                     }
-                                }
-                                z: -4
+                                }                                
                                 width: parent.width
                                 height: 40
                                 color: "transparent"
@@ -114,7 +111,7 @@ Item {
                                     id: tex
                                     anchors.centerIn: parent
                                     font.pixelSize: 20
-                                    text: Identifikator
+                                    text: Identifier
                                 }
                                 Text {
                                     id: text1

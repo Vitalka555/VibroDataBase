@@ -41,7 +41,7 @@ Item {
             }
 
             TextField {
-                id: identifikator
+                id: identifier
                 //property string IDENTIFIKATOR: identifikator.text
                 text: qsTr("")
                 anchors.verticalCenter: parent.verticalCenter
@@ -231,7 +231,7 @@ Rectangle {
         y: 407
         text: qsTr("Button")
         onClicked: {
-                        database.insertIntoTable(identifikator.text, ceh.text)
+                        database.insertIntoTable(identifier.text) //, ceh.text)
                         QueryModel1.updateModel() // И обновляем модель данных с новой записью
                     }
     }

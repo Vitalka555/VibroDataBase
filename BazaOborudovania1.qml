@@ -11,8 +11,8 @@ Item {
     Row {
         id: row1
     Label {
-        id: identifikator
-        text: "Identifikator"
+        id: identifier
+        text: "Identifier"
         font.bold: true
         font.pixelSize: 30
     }
@@ -41,8 +41,8 @@ Item {
         horizontalAlignment: Text.AlignHCenter
     }
     Component.onCompleted: {
-        mapper.addMapping(identifikator, (0x0100 + 2), "text")
-        mapper.addMapping(ceh, (0x0100 + 3), "text")
+        mapper.addMapping(identifier, (0x0100 + 2), "text")
+        //mapper.addMapping(ceh, (0x0100 + 3), "text")
         }
 }
 

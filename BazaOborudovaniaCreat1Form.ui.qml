@@ -36,7 +36,7 @@ Item {
             }
 
             TextField {
-                id: identifikator
+                id: identifier
                 //property string IDENTIFIKATOR: identifikator.text
                 text: qsTr("")
                 anchors.verticalCenter: parent.verticalCenter
