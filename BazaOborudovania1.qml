@@ -396,6 +396,169 @@ Item {
             wrapMode: Text.WordWrap
         }
         }
+        Rectangle {
+            id: param1
+            anchors.top: row18.bottom
+            anchors.topMargin: 20
+            width: maxWidth*2/3
+            anchors.bottom: parent.bottom
+            //color: "red"
+            Row {
+                id: row1param1
+                anchors.top: parent.top
+                //anchors.topMargin: 20
+                Label {
+                    id: label1
+                    text: ""
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
+            }
+            Row {
+                id: row2param1
+                anchors.top: row1param1.bottom
+                anchors.topMargin: 20
+                Label {
+                    id: label2
+                    text: "Расход: "
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
+            }
+            Row {
+                id: row3param1
+                anchors.top: row2param1.bottom
+                anchors.topMargin: 20
+                Label {
+                    id: label3
+                    text: "Давление: "
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
+            }
+        }
+        Rectangle {
+            id: param2
+            anchors.top: row18.bottom
+            anchors.topMargin: 20
+            anchors.left: param1.right
+            width: maxWidth*2/3
+            anchors.bottom: parent.bottom
+            //color: "blue"
+            RowLayout {
+                id: row1param2
+                anchors.top: parent.top
+                width: parent.width
+                //anchors.topMargin: 20
+                Label {
+                    id: label4
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    text: "Номинальный режим"
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
+            }
+            RowLayout {
+                id: row2param2
+                anchors.top: row1param2.bottom
+                anchors.topMargin: 20
+                width: parent.width
+                Label {
+                    property string text13: "Неизвестно"
+                    property string text1313: text13 !== "" ? text13 : "неизвестно"
+                    id: nominalconditionsconsumption
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    text: text1313 + " ед.изм."
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
+            }
+            RowLayout {
+                id: row3param2
+                anchors.top: row2param2.bottom
+                anchors.topMargin: 20
+                width: parent.width
+                Label {
+                    property string text15: "Неизвестно"
+                    property string text1515: text15 !== "" ? text15 : "неизвестно"
+                    id: nominalconditionspressure
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    text: text1515 + " ед.изм."
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
+            }
+        }
+        Rectangle {
+            id: param3
+            anchors.top: row18.bottom
+            anchors.topMargin: 20
+            anchors.left: param2.right
+            width: maxWidth*2/3
+            anchors.bottom: parent.bottom
+            //color: "green"
+            RowLayout {
+                id: row1param3
+                anchors.top: parent.top
+                width: parent.width
+                //anchors.topMargin: 20
+                Label {
+                    id: label5
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    text: "Рабочий диапазон"
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
+            }
+            RowLayout {
+                id: row2param3
+                anchors.top: row1param3.bottom
+                anchors.topMargin: 20
+                width: parent.width
+                Label {
+                    property string text14: "Неизвестно"
+                    property string text1414: text14 !== "" ? text14 : "неизвестно"
+                    id: operatingrangeconsumption
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    text: text1414 + " ед.изм."
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
+            }
+            RowLayout {
+                id: row3param3
+                anchors.top: row2param3.bottom
+                anchors.topMargin: 20
+                width: parent.width
+                Label {
+                    property string text16: "Неизвестно"
+                    property string text1616: text16 !== "" ? text16 : "неизвестно"
+                    id: operatingrangepresure
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    text: text1616 + " ед.изм."
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
+            }
+        }
 
     }
 
@@ -427,6 +590,10 @@ Item {
         mapper.addMapping(actuatingmechanismmanufacturer, (0x0100 + 14), "text11")
         mapper.addMapping(actuatingmechanismnumber, (0x0100 + 15), "text12")
         mapper.addMapping(photo, (0x0100 + 26), "file")
+        mapper.addMapping(nominalconditionsconsumption, (0x0100 + 22), "text13")
+        mapper.addMapping(operatingrangeconsumption, (0x0100 + 24), "text14")
+        mapper.addMapping(nominalconditionspressure, (0x0100 + 21), "text15")
+        mapper.addMapping(operatingrangepresure, (0x0100 + 23), "text16")
         //mapper.addMapping(ceh, (0x0100 + 3), "text")
         }
 }
