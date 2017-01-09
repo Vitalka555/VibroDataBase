@@ -88,8 +88,8 @@ bool DataBase::creatTable()
                     EQUIPMENTBASE_NOMINALCONDITIONSCONSUMPTION       " REAL,"
                     EQUIPMENTBASE_OPERATINGRANGEPRESSURE             " REAL,"
                     EQUIPMENTBASE_OPERATINGRANGECONSUMPTION          " REAL,"
-                    EQUIPMENTBASE_SCHEME                             " BLOB,"
-                    EQUIPMENTBASE_PHOTO                              " BLOB)"
+                    EQUIPMENTBASE_SCHEME                             " TEXT,"
+                    EQUIPMENTBASE_PHOTO                              " TEXT)"
                     ))
     {
         qDebug()<<"Ошибка при создании базы";

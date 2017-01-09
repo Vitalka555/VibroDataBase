@@ -21,5 +21,14 @@
         <file>BazaOborudovaniaCreat3Form.ui.qml</file>
         <file>BazaOborudovaniaCreat4.qml</file>
         <file>BazaOborudovaniaCreat4Form.ui.qml</file>
+        <file>database.cpp</file>
+        <file>database.h</file>
+        <file>datamapper1.cpp</file>
+        <file>datamapper1.h</file>
+        <file>main.cpp</file>
+        <file>querymodel1.cpp</file>
+        <file>querymodel1.h</file>
+        <file>photo/00ghd01ap001.jpg</file>
+        <file>photo/nophoto.jpg</file>
     </qresource>
 </RCC>

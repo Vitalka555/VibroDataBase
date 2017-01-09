@@ -8,15 +8,15 @@ Item {
             //open()
             mapper.updateData(list.currentIndex)
         }
-    property int maxWidth: rec.width
+    property int maxWidth: baza1.width/2
     Rectangle {
         id: rec
-        height: baza1.height/2
+        height: baza1.height/3
         anchors.left: parent.left
         anchors.leftMargin: 0
         anchors.top: parent.top
         anchors.topMargin: 0
-        width: baza1.width/2
+        width: baza1.width*2/3
         //color: "red"
     Row {
         id: row1
@@ -109,15 +109,29 @@ Item {
         id: rectop
         anchors.top: parent.top
         anchors.right: parent.right
-        width: baza1.width/2
-        height: baza1.height/2
+        width: baza1.width/3
+        height: baza1.height/3
         //color: "green"
+        Image {
+            property string file: "nophoto"
+            //property string text12: "Неизвестно"
+            property string file1: file !== "" ? file : "nophoto"
+            //property url name: value
+            id: photo
+            anchors.fill: parent
+            width: parent.width
+            height: parent.height
+            fillMode: Image.PreserveAspectFit
+            //source: "image://photo/00ghd01ap001.jpg"
+            //source: "file"
+            source: "/photo/" + file1 + ".jpg"
+        }
     }
 
     Rectangle {
         id: recbottom
         anchors.bottom: parent.bottom
-        height: baza1.height/2
+        height: baza1.height*2/3
         width: baza1.width
         //color: "blue"
         RowLayout {
@@ -126,9 +140,9 @@ Item {
             //width: swipeView.width/2
         Label {
             id: namedrive
-            text: "Название привода: "
+            text: "Привод: "
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 16
             //color: "green"
             width: maxWidth
             wrapMode: Text.WordWrap
@@ -140,7 +154,7 @@ Item {
             anchors.left: namedrive.right
             text: text55
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 16
             //color: "green"
             width: maxWidth
             wrapMode: Text.WordWrap
@@ -158,7 +172,7 @@ Item {
             id: drivepowertext
             text: "Мощность, кВт: " + text44
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 16
             //color: "green"
             width: maxWidth
             wrapMode: Text.WordWrap
@@ -187,7 +201,7 @@ Item {
             text: "Частота вращения, об/мин: " + text11
 
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 16
             //color: "green"
             width: maxWidth
             wrapMode: Text.WordWrap
@@ -214,7 +228,7 @@ Item {
             id: drivemanufacturer
             text: "Производитель привода: " + text22
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 16
             //color: "green"
             width: maxWidth
             wrapMode: Text.WordWrap
@@ -232,7 +246,7 @@ Item {
             id: drivenumber
             text: "Заводской номер привода: " + text33
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 16
             //color: "green"
             width: maxWidth
             wrapMode: Text.WordWrap
@@ -241,12 +255,13 @@ Item {
         RowLayout {
             id: row12
             anchors.top: row11.bottom
+            anchors.topMargin: 20
             //width: swipeView.width/2
         Label {
             id: nametransmissionmechanism
-            text: "Название передаточного механизма: "
+            text: "Передаточный механизм: "
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 16
             //color: "green"
             width: maxWidth
             wrapMode: Text.WordWrap
@@ -258,7 +273,7 @@ Item {
             anchors.left: nametransmissionmechanism.right
             text: text66
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 16
             //color: "green"
             width: maxWidth
             wrapMode: Text.WordWrap
@@ -276,7 +291,106 @@ Item {
             //anchors.left: parent.left
             text: "Производитель передаточного механизма: " + text77
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 16
+            //color: "green"
+            width: maxWidth*2
+            wrapMode: Text.WordWrap
+        }
+        }
+        Row {
+            id: row14
+            anchors.top: row13.bottom
+            width: maxWidth*2
+            //width: swipeView.width/2
+        Label {
+            property string text8: "Неизвестно"
+            property string text88: text8 !== "" ? text8 : "неизвестно"
+            id: transmissionmechanismnumber
+            //anchors.left: parent.left
+            text: "Производитель передаточного механизма: " + text88
+            font.bold: true
+            font.pixelSize: 16
+            //color: "green"
+            width: maxWidth*2
+            wrapMode: Text.WordWrap
+        }
+        }
+        RowLayout {
+            id: row15
+            anchors.top: row14.bottom
+            anchors.topMargin: 20
+            //width: swipeView.width/2
+        Label {
+            id: nameactuatingmechanism
+            text: "Исполнительный механизм: "
+            font.bold: true
+            font.pixelSize: 16
+            //color: "green"
+            width: maxWidth
+            wrapMode: Text.WordWrap
+        }
+        Label {
+            property string text9: "Неизвестно"
+            property string text99: text9 !== "" ? text9 : "неизвестно"
+            id: actuatingmechanismspecification
+            anchors.left: nameactuatingmechanism.right
+            text: text99
+            font.bold: true
+            font.pixelSize: 16
+            //color: "green"
+            width: maxWidth
+            wrapMode: Text.WordWrap
+        }
+        }
+        Row {
+            id: row16
+            anchors.top: row15.bottom
+            width: maxWidth*2
+            //width: swipeView.width/2
+        Label {
+            property string text10: "Неизвестно"
+            property string text1010: text10 !== "" ? text10 : "неизвестно"
+            id: rotationfrequencyam
+            //anchors.left: parent.left
+            text: "Частота вращения, об/мин: " + text1010
+            font.bold: true
+            font.pixelSize: 16
+            //color: "green"
+            width: maxWidth*2
+            wrapMode: Text.WordWrap
+        }
+        }
+        Row {
+            id: row17
+            anchors.top: row16.bottom
+            width: maxWidth*2
+            //width: swipeView.width/2
+        Label {
+            property string text11: "Неизвестно"
+            property string text1111: text11 !== "" ? text11 : "неизвестно"
+            id: actuatingmechanismmanufacturer
+            //anchors.left: parent.left
+            text: "Производитель: " + text1111
+            font.bold: true
+            font.pixelSize: 16
+            //color: "green"
+            width: maxWidth*2
+            wrapMode: Text.WordWrap
+        }
+        }
+        Row {
+            id: row18
+            anchors.top: row17.bottom
+            width: maxWidth*2
+            //width: swipeView.width/2
+        Label {
+            property string text12: "Неизвестно"
+            property string text1212: text12 !== "" ? text12 : "неизвестно"
+            id: actuatingmechanismnumber
+            //anchors.left: parent.left
+            text: "Заводской номер: " + text1212
+            font.bold: true
+            font.pixelSize: 16
             //color: "green"
             width: maxWidth*2
             wrapMode: Text.WordWrap
@@ -307,6 +421,12 @@ Item {
         mapper.addMapping(drivenumber, (0x0100 + 11), "text3")
         mapper.addMapping(transmissionmechanismspecification, (0x0100 + 16), "text6")
         mapper.addMapping(transmissionmechanismmanufacturer, (0x0100 + 17), "text7")
+        mapper.addMapping(transmissionmechanismnumber, (0x0100 + 18), "text8")
+        mapper.addMapping(actuatingmechanismspecification, (0x0100 + 13), "text9")
+        mapper.addMapping(rotationfrequencyam, (0x0100 + 12), "text10")
+        mapper.addMapping(actuatingmechanismmanufacturer, (0x0100 + 14), "text11")
+        mapper.addMapping(actuatingmechanismnumber, (0x0100 + 15), "text12")
+        mapper.addMapping(photo, (0x0100 + 26), "file")
         //mapper.addMapping(ceh, (0x0100 + 3), "text")
         }
 }
