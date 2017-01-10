@@ -37,6 +37,34 @@
 #define EQUIPMENTBASE_OPERATINGRANGECONSUMPTION          "OperatingRangeConsumption"
 #define EQUIPMENTBASE_SCHEME                             "Scheme"
 #define EQUIPMENTBASE_PHOTO                              "Photo"
+#define EQUIPMENTBASE_RADIALALIGNMENT                    "RadialAlignment"
+#define EQUIPMENTBASE_ANGULARALIGNMENT                   "AngularAlignment"
+#define EQUIPMENTBASE_RESTINGPAWSDRIVE                   "RestingPawsDrive"
+#define EQUIPMENTBASE_RESTINGPAWSTM                      "RestingPawsTM"
+#define EQUIPMENTBASE_RESTINGPAWSAM                      "RestingPawsAM"
+#define EQUIPMENTBASE_NHH                                "NHH"
+#define EQUIPMENTBASE_NOMNORMD                           "NomNormD"
+#define EQUIPMENTBASE_NOMOGRD                            "NomOgrD"
+#define EQUIPMENTBASE_NOMOTKAZD                          "NomOtkazD"
+#define EQUIPMENTBASE_NOMNORMTM                          "NomNormTM"
+#define EQUIPMENTBASE_NOMOGRTM                           "NomOgrTM"
+#define EQUIPMENTBASE_NOMOTKAZTM                         "NomOtkazTM"
+#define EQUIPMENTBASE_NOMNORMAM                          "NomNormAM"
+#define EQUIPMENTBASE_NOMOGRAM                           "NomOgrAM"
+#define EQUIPMENTBASE_NOMOTKAZAM                         "NomOtkazAM"
+#define EQUIPMENTBASE_RDNORMD                            "RdNormD"
+#define EQUIPMENTBASE_RDOGRD                             "RdOgrD"
+#define EQUIPMENTBASE_RDOTKAZD                           "RdOtkazD"
+#define EQUIPMENTBASE_RDNORMTM                           "RdNormTM"
+#define EQUIPMENTBASE_RDOGRTM                            "RdOgrTM"
+#define EQUIPMENTBASE_RDOTKAZTM                          "RdOtkazTM"
+#define EQUIPMENTBASE_RDNORMAM                           "RdNormAM"
+#define EQUIPMENTBASE_RDOGRAM                            "RdOgrAM"
+#define EQUIPMENTBASE_RDOTKAZAM                          "RdOtkazAM"
+#define EQUIPMENTBASE_TOTKAZD                            "TOtkazD"
+#define EQUIPMENTBASE_TOTKAZTM                           "TOtkazTM"
+#define EQUIPMENTBASE_TOTKAZAM                           "TOtkazAM"
+
 
 /* Первая колонка содержит Autoincrement ID */
 
@@ -73,7 +101,16 @@ public slots:
                          const QString &AMNumber, const QString &NominalConditionsPressure,
                          const QString &NominalConditionsConsumption, const QString &OperatingRangePressure,
                          const QString &OperatingRangeConsumption, const QString &Scheme,
-                         const QString &Photo);        //(const QVariantList &data); //добавление записей в таблицу
+                         const QString &Photo, const QString &RadialAlignment, const QString &AngularAlignment,
+                         const QString &RestingPawsDrive, const QString &RestingPawsTM, const QString &RestingPawsAM,
+                         const QString &NHH, const QString &NomNormD, const QString &NomOgrD,
+                         const QString &NomOtkazD, const QString &NomNormTM, const QString &NomOgrTM,
+                         const QString &NomOtkazTM, const QString &NomNormAM, const QString &NomOgrAM,
+                         const QString &NomOtkazAM, const QString &RdNormD, const QString &RdOgrD,
+                         const QString &RdOtkazD, const QString &RdNormTM, const QString &RdOgrTM,
+                         const QString &RdOtkazTM, const QString &RdNormAM, const QString &RdOgrAM,
+                         const QString &RdOtkazAM, const QString &TOtkazD, const QString &TOtkazTM,
+                         const QString &TOtkazAM);        //(const QVariantList &data); //добавление записей в таблицу
     bool removeRecord(const int id);                //удаление записей
 };
 
