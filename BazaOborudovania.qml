@@ -203,6 +203,7 @@ Rectangle {
             id: baza1
         }
         BazaOborudovania2 {
+            id: baza2
         }
         BazaOborudovania3 {
         }
