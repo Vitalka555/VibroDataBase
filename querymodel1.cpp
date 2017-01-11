@@ -43,6 +43,33 @@ QHash<int, QByteArray> QueryModel1::roleNames() const
     roles[OperatingRangeConsumptionRole] = "OperatingRangeConsumption";
     roles[SchemeRole] = "Scheme";
     roles[PhotoRole] = "Photo";
+    roles[RadialAlignmentRole] = "RadialAlignment";
+    roles[AngularAlignmentRole] = "AngularAlignment";
+    roles[RestingPawsDriveRole] = "RestingPawsDrive";
+    roles[RestingPawsTMRole] = "RestingPawsTM";
+    roles[RestingPawsAMRole] = "RestingPawsAM";
+    roles[NHHRole] = "NHH";
+    roles[NomNormDRole] = "NomNormD";
+    roles[NomOgrDRole] = "NomOgrD";
+    roles[NomOtkazDRole] = "NomOtkazD";
+    roles[NomNormTMRole] = "NomNormTM";
+    roles[NomOgrTMRole] = "NomOgrTM";
+    roles[NomOtkazTMRole] = "NomOtkazTM";
+    roles[NomNormAMRole] = "NomNormAM";
+    roles[NomOgrAMRole] = "NomOgrAM";
+    roles[NomOtkazAMRole] = "NomOtkazAM";
+    roles[RdNormDRole] = "RdNormD";
+    roles[RdOgrDRole] = "RdOgrD";
+    roles[RdOtkazDRole] = "RdOtkazD";
+    roles[RdNormTMRole] = "RdNormTM";
+    roles[RdOgrTMRole] = "RdOgrTM";
+    roles[RdOtkazTMRole] = "RdOtkazTM";
+    roles[RdNormAMRole] = "RdNormAM";
+    roles[RdOgrAMRole] = "RdOgrAM";
+    roles[RdOtkazAMRole] = "RdOtkazAM";
+    roles[TOtkazDRole] = "TOtkazD";
+    roles[TOtkazTMRole] = "TOtkazTM";
+    roles[TOtkazAMRole] = "TOtkazAM";
 
     return roles;
 }
@@ -61,7 +88,20 @@ void QueryModel1::updateModel()
                    EQUIPMENTBASE_AMNUMBER ", " EQUIPMENTBASE_NOMINALCONDITIONSPRESSURE ", "
                    EQUIPMENTBASE_NOMINALCONDITIONSCONSUMPTION ", " EQUIPMENTBASE_OPERATINGRANGEPRESSURE ", "
                    EQUIPMENTBASE_OPERATINGRANGECONSUMPTION ", " EQUIPMENTBASE_SCHEME ", "
-                   EQUIPMENTBASE_PHOTO " FROM " EQUIPMENTBASE);
+                   EQUIPMENTBASE_PHOTO ", " EQUIPMENTBASE_RADIALALIGNMENT ", "
+                   EQUIPMENTBASE_ANGULARALIGNMENT ", " EQUIPMENTBASE_RESTINGPAWSDRIVE ", "
+                   EQUIPMENTBASE_RESTINGPAWSTM ", " EQUIPMENTBASE_RESTINGPAWSAM ", "
+                   EQUIPMENTBASE_NHH ", " EQUIPMENTBASE_NOMNORMD ", "
+                   EQUIPMENTBASE_NOMOGRD ", " EQUIPMENTBASE_NOMOTKAZD ", "
+                   EQUIPMENTBASE_NOMNORMTM ", " EQUIPMENTBASE_NOMOGRTM ", "
+                   EQUIPMENTBASE_NOMOTKAZTM ", " EQUIPMENTBASE_NOMNORMAM ", "
+                   EQUIPMENTBASE_NOMOGRAM ", " EQUIPMENTBASE_NOMOTKAZAM ", "
+                   EQUIPMENTBASE_RDNORMD ", " EQUIPMENTBASE_RDOGRD ", "
+                   EQUIPMENTBASE_RDOTKAZD ", " EQUIPMENTBASE_RDNORMTM ", "
+                   EQUIPMENTBASE_RDOGRTM ", " EQUIPMENTBASE_RDOTKAZTM ", "
+                   EQUIPMENTBASE_RDNORMAM ", " EQUIPMENTBASE_RDOGRAM ", "
+                   EQUIPMENTBASE_RDOTKAZAM ", " EQUIPMENTBASE_TOTKAZD ", "
+                   EQUIPMENTBASE_TOTKAZTM ", " EQUIPMENTBASE_TOTKAZAM " FROM " EQUIPMENTBASE);
 }
 /* Получение id строки в модели представления данных */
 int QueryModel1::getId(int row)
