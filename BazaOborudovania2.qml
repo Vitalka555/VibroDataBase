@@ -7,15 +7,16 @@ Item {
     function editEntry(row) {
             mapper.updateData(list.currentIndex)
         }
-    property int maxWidth: baza1.width/2
+    property int maxWidth: baza2.width/2
     Rectangle {
         id: rec
-        height: baza1.height/3
+        height: baza2.height/3
         anchors.left: parent.left
         anchors.leftMargin: 0
         anchors.top: parent.top
         anchors.topMargin: 0
-        width: baza1.width*2/3
+        width: baza2.width*2/3
+        //color: "red"
     Row {
         id: row1
     Label {
@@ -25,10 +26,10 @@ Item {
         font.pixelSize: 30
     }
     }
-    RowLayout {
+    Row {
         id: row2
         anchors.top: row1.bottom
-        width: parent.width
+        width: maxWidth*4/3
     Label {
         property string text1: "Неизвестно"
         property string text11: text1 !== "" ? text1 : "неизвестно"
@@ -37,55 +38,72 @@ Item {
         text: "Допустимая радиальная несоосность, мм: " + text11
         font.bold: true
         font.pixelSize: 16
-        width: maxWidth*2/3
+        width: maxWidth*4/3
         wrapMode: Text.WordWrap
     }
     }
     Row {
         id: row3
         anchors.top: row2.bottom
-        width: rec.width
+        width: maxWidth*4/3
     Label {
-        id: building
-        text: "Здание"
+        property string text2: "Неизвестно"
+        property string text22: text2 !== "" ? text2 : "неизвестно"
+        id: angularalign
+        //anchors.horizontalCenter: parent.horizontalCenter
+        text: "Допустимая угловая несоосность, мм: " + text22
         font.bold: true
-        font.pixelSize: 20
-        color: "green"
+        font.pixelSize: 16
+        width: maxWidth*4/3
+        wrapMode: Text.WordWrap
     }
     }
     Row {
         id: row4
         anchors.top: row3.bottom
+        width: maxWidth*4/3
     Label {
-        id: level
-        text: "Отметка"
+        property string text3: "Неизвестно"
+        property string text33: text3 !== "" ? text3 : "неизвестно"
+        id: restingpawsdrive
+        //anchors.horizontalCenter: parent.horizontalCenter
+        text: "Допустимая неплотность прилегания лап привода, мм: " + text33
         font.bold: true
-        font.pixelSize: 20
-        color: "green"
+        font.pixelSize: 16
+        width: maxWidth*4/3
+        wrapMode: Text.WordWrap
     }
     }
     Row {
         id: row5
         anchors.top: row4.bottom
+        width: maxWidth*4/3
     Label {
-        id: premises
-        text: "Помещение"
+        property string text4: "Неизвестно"
+        property string text44: text4 !== "" ? text4 : "неизвестно"
+        id: restingpawstm
+        //anchors.horizontalCenter: parent.horizontalCenter
+        text: "Допустимая неплотность прилегания лап передаточного механизма, мм: " + text44
         font.bold: true
-        font.pixelSize: 20
-        color: "green"
+        font.pixelSize: 16
+        width: maxWidth*4/3
+        wrapMode: Text.WordWrap
     }
     }
     Row {
         id: row6
         anchors.top: row5.bottom
+        width: maxWidth*4/3
         //width: swipeView.width/2
     Label {
-        id: equipmentname
-        text: "Наименование оборудования"
+        property string text5: "Неизвестно"
+        property string text55: text5 !== "" ? text5 : "неизвестно"
+        id: restingpawsam
+        //anchors.horizontalCenter: parent.horizontalCenter
+        text: "Допустимая неплотность прилегания лап исполнительного механизма, мм: " + text55
         font.bold: true
-        font.pixelSize: 20
-        color: "green"
-        width: maxWidth
+        font.pixelSize: 16
+        width: maxWidth*4/3
         wrapMode: Text.WordWrap
     }
     }
@@ -100,237 +118,48 @@ Item {
         Image {
             property string file: "nophoto"
             property string file1: file !== "" ? file : "nophoto"
-            id: photo
+            id: shema
             anchors.fill: parent
             width: parent.width
             height: parent.height
             fillMode: Image.PreserveAspectFit
-            source: "/photo/" + file1 + ".jpg"
+            source: "/shema/" + file1 + ".jpg"
         }
     }
 
     Rectangle {
-        id: recbottom
-        anchors.bottom: parent.bottom
-        height: baza1.height*2/3
-        width: baza1.width
-        RowLayout {
-            id: row7
-            anchors.top: recbottom.top
-        Label {
-            id: namedrive
-            text: "Привод: "
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth
-            wrapMode: Text.WordWrap
-        }
-        Label {
-            property string text5: "Неизвестно"
-            property string text55: text5 !== "" ? text5 : "неизвестно"
-            id: drivespecification
-            anchors.left: namedrive.right
-            text: text55
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth
-            wrapMode: Text.WordWrap
-        }
-        }
-        RowLayout {
-            id: row8
-            anchors.top: row7.bottom
-            anchors.left: parent.left
-            width: maxWidth
-        Label {
-            property string text4: "Неизвестно"
-            property string text44: text4 !== "" ? text4 : "неизвестно"
-            id: drivepowertext
-            text: "Мощность, кВт: " + text44
-            font.bold: true
-            font.pixelSize: 16
-            //color: "green"
-            width: maxWidth
-            wrapMode: Text.WordWrap
-        }
-        }
-        RowLayout {
-            id: row9
-            anchors.top: row7.bottom
-            anchors.left: row8.right
-            width: maxWidth
-        Label {
-            property string text1: "Неизвестно"
-            property string text11: text1 !== "" ? text1 : "неизвестно"
-            id: rotationfrequencydrivetext
-            text: "Частота вращения, об/мин: " + text11
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth
-            wrapMode: Text.WordWrap
-        }
-        }
-        RowLayout {
-            id: row10
-            anchors.top: row9.bottom
-            anchors.left: parent.left
-            width: maxWidth
-        Label {
-            property string text2: "Неизвестно"
-            property string text22: text2 !== "" ? text2 : "неизвестно"
-            id: drivemanufacturer
-            text: "Производитель привода: " + text22
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth
-            wrapMode: Text.WordWrap
-        }
-        }
-        RowLayout {
-            id: row11
-            anchors.top: row10.bottom
-            anchors.left: parent.left
-            width: maxWidth
-        Label {
-            property string text3: "Неизвестно"
-            property string text33: text3 !== "" ? text3 : "неизвестно"
-            id: drivenumber
-            text: "Заводской номер привода: " + text33
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth
-            wrapMode: Text.WordWrap
-        }
-        }
-        RowLayout {
-            id: row12
-            anchors.top: row11.bottom
-            anchors.topMargin: 20
-        Label {
-            id: nametransmissionmechanism
-            text: "Передаточный механизм: "
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth
-            wrapMode: Text.WordWrap
-        }
-        Label {
-            property string text6: "Неизвестно"
-            property string text66: text6 !== "" ? text6 : "неизвестно"
-            id: transmissionmechanismspecification
-            anchors.left: nametransmissionmechanism.right
-            text: text66
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth
-            wrapMode: Text.WordWrap
-        }
-        }
-        Row {
-            id: row13
-            anchors.top: row12.bottom
-            width: maxWidth*2
-        Label {
-            property string text7: "Неизвестно"
-            property string text77: text7 !== "" ? text7 : "неизвестно"
-            id: transmissionmechanismmanufacturer
-            text: "Производитель передаточного механизма: " + text77
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth*2
-            wrapMode: Text.WordWrap
-        }
-        }
-        Row {
-            id: row14
-            anchors.top: row13.bottom
-            width: maxWidth*2
-        Label {
-            property string text8: "Неизвестно"
-            property string text88: text8 !== "" ? text8 : "неизвестно"
-            id: transmissionmechanismnumber
-            text: "Производитель передаточного механизма: " + text88
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth*2
-            wrapMode: Text.WordWrap
-        }
-        }
-        RowLayout {
-            id: row15
-            anchors.top: row14.bottom
-            anchors.topMargin: 20
-        Label {
-            id: nameactuatingmechanism
-            text: "Исполнительный механизм: "
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth
-            wrapMode: Text.WordWrap
-        }
-        Label {
-            property string text9: "Неизвестно"
-            property string text99: text9 !== "" ? text9 : "неизвестно"
-            id: actuatingmechanismspecification
-            anchors.left: nameactuatingmechanism.right
-            text: text99
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth
-            wrapMode: Text.WordWrap
-        }
-        }
-        Row {
-            id: row16
-            anchors.top: row15.bottom
-            width: maxWidth*2
-        Label {
-            property string text10: "Неизвестно"
-            property string text1010: text10 !== "" ? text10 : "неизвестно"
-            id: rotationfrequencyam
-            text: "Частота вращения, об/мин: " + text1010
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth*2
-            wrapMode: Text.WordWrap
-        }
-        }
-        Row {
-            id: row17
-            anchors.top: row16.bottom
-            width: maxWidth*2
-        Label {
-            property string text11: "Неизвестно"
-            property string text1111: text11 !== "" ? text11 : "неизвестно"
-            id: actuatingmechanismmanufacturer
-            text: "Производитель: " + text1111
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth*2
-            wrapMode: Text.WordWrap
-        }
-        }
-        Row {
-            id: row18
-            anchors.top: row17.bottom
-            width: maxWidth*2
-        Label {
-            property string text12: "Неизвестно"
-            property string text1212: text12 !== "" ? text12 : "неизвестно"
-            id: actuatingmechanismnumber
-            text: "Заводской номер: " + text1212
-            font.bold: true
-            font.pixelSize: 16
-            width: maxWidth*2
-            wrapMode: Text.WordWrap
-        }
-        }
+        id: vibro1
+        anchors.top: rec.bottom
+        height: baza1.height*1/2
+        width: baza1.width/3
+        color: "red"
+    }
+
+    Rectangle {
+        id: vibro2
+        anchors.top: rec.bottom
+        anchors.left: vibro1.right
+        height: baza1.height*1/2
+        width: baza1.width/3
+        color: "green"
+    }
+
+    Rectangle {
+        id: vibro3
+        anchors.top: rec.bottom
+        anchors.left: vibro2.right
+        height: baza1.height*1/2
+        width: baza1.width/3
+        color: "yellow"
+    }
+
         Rectangle {
             id: param1
-            anchors.top: row18.bottom
-            anchors.topMargin: 20
+            anchors.top: vibro1.bottom
+            //anchors.topMargin: 20
             width: maxWidth*2/3
             anchors.bottom: parent.bottom
+            color: "blue"
             Row {
                 id: row1param1
                 anchors.top: parent.top
@@ -372,7 +201,7 @@ Item {
         }
         Rectangle {
             id: param2
-            anchors.top: row18.bottom
+            anchors.top: vibro1.bottom
             anchors.topMargin: 20
             anchors.left: param1.right
             width: maxWidth*2/3
@@ -428,7 +257,7 @@ Item {
         }
         Rectangle {
             id: param3
-            anchors.top: row18.bottom
+            anchors.top: vibro1.bottom
             anchors.topMargin: 20
             anchors.left: param2.right
             width: maxWidth*2/3
@@ -483,15 +312,15 @@ Item {
             }
         }
 
-    }
+
     Component.onCompleted: {
         mapper.addMapping(identifier, (0x0100 + 2), "text")
-//        mapper.addMapping(level, (0x0100 + 3), "text")
-//        mapper.addMapping(premises, (0x0100 + 4), "text")
-//        mapper.addMapping(equipmentname, (0x0100 + 5), "text")
-//        mapper.addMapping(drivespecification, (0x0100 + 7), "text5")
-//        mapper.addMapping(drivepowertext, (0x0100 + 8), "text4")
-//        mapper.addMapping(rotationfrequencydrivetext, (0x0100 + 9), "text1")
+        mapper.addMapping(radialalign, (0x0100 + 27), "text1")
+        mapper.addMapping(angularalign, (0x0100 + 28), "text2")
+        mapper.addMapping(restingpawsdrive, (0x0100 + 29), "text3")
+        mapper.addMapping(restingpawstm, (0x0100 + 30), "text4")
+        mapper.addMapping(restingpawsam, (0x0100 + 31), "text5")
+        mapper.addMapping(shema, (0x0100 + 25), "file")
 //        mapper.addMapping(drivemanufacturer, (0x0100 + 10), "text2")
 //        mapper.addMapping(drivenumber, (0x0100 + 11), "text3")
 //        mapper.addMapping(transmissionmechanismspecification, (0x0100 + 16), "text6")

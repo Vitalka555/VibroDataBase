@@ -84,7 +84,7 @@ Item {
         font.bold: true
         font.pixelSize: 20
         color: "green"
-        width: maxWidth
+        width: maxWidth*4/3
         wrapMode: Text.WordWrap
     }
     }

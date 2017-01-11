@@ -30,5 +30,7 @@
         <file>querymodel1.h</file>
         <file>photo/00ghd01ap001.jpg</file>
         <file>photo/nophoto.jpg</file>
+        <file>shema/00GHD01AP001.jpg</file>
+        <file>shema/nophoto.jpg</file>
     </qresource>
 </RCC>
