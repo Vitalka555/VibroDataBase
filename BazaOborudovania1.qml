@@ -402,7 +402,7 @@ Item {
             anchors.topMargin: 20
             width: maxWidth*2/3
             anchors.bottom: parent.bottom
-            color: "red"
+            //color: "red"
             Row {
                 id: row1param1
                 anchors.top: parent.top
@@ -448,9 +448,9 @@ Item {
             anchors.top: row18.bottom
             anchors.topMargin: 20
             anchors.left: param1.right
-            width: maxWidth*2/3
+            width: baza1.width/3
             anchors.bottom: parent.bottom
-            color: "blue"
+            //color: "blue"
             RowLayout {
                 id: row1param2
                 anchors.top: parent.top
@@ -506,9 +506,9 @@ Item {
             anchors.top: row18.bottom
             anchors.topMargin: 20
             anchors.left: param2.right
-            width: maxWidth*2/3
+            width: baza1.width/3
             anchors.bottom: parent.bottom
-            color: "green"
+            //color: "green"
             RowLayout {
                 id: row1param3
                 anchors.top: parent.top

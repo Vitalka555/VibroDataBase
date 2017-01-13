@@ -132,7 +132,7 @@ Item {
         anchors.top: rec00.bottom
         height: baza2.height*1/2
         width: baza2.width/4
-        color: "red"
+        //color: "red"
         RowLayout {
             id: vibro1param1
             anchors.top: parent.top
@@ -301,7 +301,7 @@ Item {
         anchors.left: vibro1.right
         height: baza2.height*1/2
         width: baza2.width/4
-        color: "green"
+        //color: "green"
         RowLayout {
             id: vibro2param1
             anchors.top: parent.top
@@ -345,6 +345,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "green"
             }
         }
         RowLayout {
@@ -376,6 +377,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "green"
             }
         }
         RowLayout {
@@ -392,6 +394,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "orange"
             }
         }
         RowLayout {
@@ -408,6 +411,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "red"
             }
         }
         RowLayout {
@@ -439,6 +443,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "green"
             }
         }
         RowLayout {
@@ -455,6 +460,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "orange"
             }
         }
         RowLayout {
@@ -471,6 +477,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "red"
             }
         }
 
@@ -482,7 +489,7 @@ Item {
         anchors.left: vibro2.right
         height: baza2.height*1/2
         width: baza2.width/4
-        color: "yellow"
+        //color: "yellow"
         RowLayout {
             id: vibro3param1
             anchors.top: parent.top
@@ -555,6 +562,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "green"
             }
         }
         RowLayout {
@@ -571,6 +579,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "orange"
             }
         }
         RowLayout {
@@ -587,6 +596,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "red"
             }
         }
         RowLayout {
@@ -618,6 +628,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "green"
             }
         }
         RowLayout {
@@ -634,6 +645,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "orange"
             }
         }
         RowLayout {
@@ -650,6 +662,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "red"
             }
         }
     }
@@ -659,7 +672,7 @@ Item {
         anchors.left: vibro3.right
         height: baza2.height*1/2
         width: baza2.width/4
-        color: "grey"
+        //color: "grey"
         RowLayout {
             id: vibro4param1
             anchors.top: parent.top
@@ -732,6 +745,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "green"
             }
         }
         RowLayout {
@@ -748,6 +762,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "orange"
             }
         }
         RowLayout {
@@ -764,6 +779,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "red"
             }
         }
         RowLayout {
@@ -795,6 +811,7 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "green"
             }
         }
         RowLayout {
@@ -806,11 +823,12 @@ Item {
                 property string text2323: text23 !== "" ? text23 : "неизвестно"
                 id: rdogram
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: text23 + " ед.изм."
+                text: text2323 + " ед.изм."
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "orange"
             }
         }
         RowLayout {
@@ -827,49 +845,35 @@ Item {
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+                color: "red"
             }
         }
     }
 
         Rectangle {
-            id: param1
+            id: temper1
             anchors.top: vibro1.bottom
             //anchors.topMargin: 20
-            width: maxWidth*2/3
+            width: baza2.width/4
             anchors.bottom: parent.bottom
-            color: "blue"
-            Row {
-                id: row1param1
+            //color: "blue"
+            RowLayout {
+                id: temp1par1
                 anchors.top: parent.top
-                Label {
-                    id: label1
-                    text: ""
+                Label {                    
+                    text: "Температура отказа"
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3
                     wrapMode: Text.WordWrap
                 }
             }
-            Row {
-                id: row2param1
-                anchors.top: row1param1.bottom
+            RowLayout {
+                id: temp1par2
+                anchors.top: temp1par1.bottom
                 anchors.topMargin: 20
                 Label {
-                    id: label2
-                    text: "Расход: "
-                    font.bold: true
-                    font.pixelSize: 16
-                    width: maxWidth*2/3
-                    wrapMode: Text.WordWrap
-                }
-            }
-            Row {
-                id: row3param1
-                anchors.top: row2param1.bottom
-                anchors.topMargin: 20
-                Label {
-                    id: label3
-                    text: "Давление: "
+                    text: "t, °C"
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3
@@ -878,20 +882,20 @@ Item {
             }
         }
         Rectangle {
-            id: param2
+            id: temper2
             anchors.top: vibro1.bottom
-            anchors.topMargin: 20
-            anchors.left: param1.right
-            width: maxWidth*2/3
+            //anchors.topMargin: 20
+            width: baza2.width/4
             anchors.bottom: parent.bottom
+            anchors.left: temper1.right
+            //color: "red"
             RowLayout {
-                id: row1param2
+                id: temp2par1
                 anchors.top: parent.top
                 width: parent.width
                 Label {
-                    id: label4
                     anchors.horizontalCenter: parent.horizontalCenter
-                    text: "Номинальный режим"
+                    text: "Привод"
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3
@@ -899,55 +903,39 @@ Item {
                 }
             }
             RowLayout {
-                id: row2param2
-                anchors.top: row1param2.bottom
+                id: temp2par2
+                anchors.top: temp2par1.bottom
                 anchors.topMargin: 20
                 width: parent.width
                 Label {
-                    property string text13: "Неизвестно"
-                    property string text1313: text13 !== "" ? text13 : "неизвестно"
-                    id: nominalconditionsconsumption
+                    property string text25: "Неизвестно"
+                    property string text2525: text25 !== "" ? text25 : "неизвестно"
+                    id: totkazd
                     anchors.horizontalCenter: parent.horizontalCenter
-                    text: text1313 + " ед.изм."
+                    text: text2525
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3
                     wrapMode: Text.WordWrap
-                }
-            }
-            RowLayout {
-                id: row3param2
-                anchors.top: row2param2.bottom
-                anchors.topMargin: 20
-                width: parent.width
-                Label {
-                    property string text15: "Неизвестно"
-                    property string text1515: text15 !== "" ? text15 : "неизвестно"
-                    id: nominalconditionspressure
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    text: text1515 + " ед.изм."
-                    font.bold: true
-                    font.pixelSize: 16
-                    width: maxWidth*2/3
-                    wrapMode: Text.WordWrap
+                    color: "red"
                 }
             }
         }
         Rectangle {
-            id: param3
+            id: temper3
             anchors.top: vibro1.bottom
-            anchors.topMargin: 20
-            anchors.left: param2.right
-            width: maxWidth*2/3
+            //anchors.topMargin: 20
+            width: baza2.width/4
             anchors.bottom: parent.bottom
+            anchors.left: temper2.right
+            //color: "red"
             RowLayout {
-                id: row1param3
+                id: temp3par1
                 anchors.top: parent.top
                 width: parent.width
                 Label {
-                    id: label5
                     anchors.horizontalCenter: parent.horizontalCenter
-                    text: "Рабочий диапазон"
+                    text: "Передаточный механизм"
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3
@@ -955,16 +943,39 @@ Item {
                 }
             }
             RowLayout {
-                id: row2param3
-                anchors.top: row1param3.bottom
+                id: temp3par2
+                anchors.top: temp3par1.bottom
                 anchors.topMargin: 20
                 width: parent.width
                 Label {
-                    property string text14: "Неизвестно"
-                    property string text1414: text14 !== "" ? text14 : "неизвестно"
-                    id: operatingrangeconsumption
+                    property string text26: "Неизвестно"
+                    property string text2626: text26 !== "" ? text26 : "неизвестно"
+                    id: totkaztm
                     anchors.horizontalCenter: parent.horizontalCenter
-                    text: text1414 + " ед.изм."
+                    text: text2626
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                    color: "red"
+                }
+            }
+        }
+        Rectangle {
+            id: temper4
+            anchors.top: vibro1.bottom
+            //anchors.topMargin: 20
+            width: baza2.width/4
+            anchors.bottom: parent.bottom
+            anchors.left: temper3.right
+            //color: "red"
+            RowLayout {
+                id: temp4par1
+                anchors.top: parent.top
+                width: parent.width
+                Label {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    text: "Исполнительный механизм"
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3
@@ -972,20 +983,21 @@ Item {
                 }
             }
             RowLayout {
-                id: row3param3
-                anchors.top: row2param3.bottom
+                id: temp4par2
+                anchors.top: temp4par1.bottom
                 anchors.topMargin: 20
                 width: parent.width
                 Label {
-                    property string text16: "Неизвестно"
-                    property string text1616: text16 !== "" ? text16 : "неизвестно"
-                    id: operatingrangepresure
+                    property string text27: "Неизвестно"
+                    property string text2727: text27 !== "" ? text27 : "неизвестно"
+                    id: totkazam
                     anchors.horizontalCenter: parent.horizontalCenter
-                    text: text1616 + " ед.изм."
+                    text: text2727
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3
                     wrapMode: Text.WordWrap
+                    color: "red"
                 }
             }
         }
@@ -1018,5 +1030,8 @@ Item {
         mapper.addMapping(rdnormam, (0x0100 + 48), "text22")
         mapper.addMapping(rdogram, (0x0100 + 49), "text23")
         mapper.addMapping(rdotkazam, (0x0100 + 50), "text24")
+        mapper.addMapping(totkazd, (0x0100 + 51), "text25")
+        mapper.addMapping(totkaztm, (0x0100 + 52), "text26")
+        mapper.addMapping(totkazam, (0x0100 + 53), "text27")
         }
 }
