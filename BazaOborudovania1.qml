@@ -409,7 +409,7 @@ Item {
                 //anchors.topMargin: 20
                 Label {
                     id: label1
-                    text: ""
+                    text: "Тенологические параметры"
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3

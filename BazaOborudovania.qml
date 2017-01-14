@@ -3,6 +3,7 @@ import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.0
 Item {
     id: item1    
+    property int wid: item1.width/5 + 20
     RowLayout {
         anchors.fill: parent
         Rectangle {
@@ -11,7 +12,8 @@ Item {
             anchors.left: parent.left            
             anchors.top: parent.top            
             height: item1.height
-            width: 300
+            //width: 300
+            width: wid
             color: "white"
             border.width: 2
             border.color: "#353637"
