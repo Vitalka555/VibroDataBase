@@ -15,8 +15,7 @@ Item {
         anchors.leftMargin: 0
         anchors.top: parent.top
         anchors.topMargin: 0
-        width: baza2.width*2/3
-        //color: "red"
+        width: baza2.width*2/3        
     Row {
         id: row1
     Label {
@@ -49,8 +48,7 @@ Item {
     Label {
         property string text2: "Неизвестно"
         property string text22: text2 !== "" ? text2 : "неизвестно"
-        id: angularalign
-        //anchors.horizontalCenter: parent.horizontalCenter
+        id: angularalign        
         text: "Допустимая угловая несоосность, мм: " + text22
         font.bold: true
         font.pixelSize: 16
@@ -65,8 +63,7 @@ Item {
     Label {
         property string text3: "Неизвестно"
         property string text33: text3 !== "" ? text3 : "неизвестно"
-        id: restingpawsdrive
-        //anchors.horizontalCenter: parent.horizontalCenter
+        id: restingpawsdrive        
         text: "Допустимая неплотность прилегания лап привода, мм: " + text33
         font.bold: true
         font.pixelSize: 16
@@ -81,8 +78,7 @@ Item {
     Label {
         property string text4: "Неизвестно"
         property string text44: text4 !== "" ? text4 : "неизвестно"
-        id: restingpawstm
-        //anchors.horizontalCenter: parent.horizontalCenter
+        id: restingpawstm        
         text: "Допустимая неплотность прилегания лап передаточного механизма, мм: " + text44
         font.bold: true
         font.pixelSize: 16
@@ -93,13 +89,11 @@ Item {
     Row {
         id: row6
         anchors.top: row5.bottom
-        width: maxWidth*4/3
-        //width: swipeView.width/2
+        width: maxWidth*4/3        
     Label {
         property string text5: "Неизвестно"
         property string text55: text5 !== "" ? text5 : "неизвестно"
-        id: restingpawsam
-        //anchors.horizontalCenter: parent.horizontalCenter
+        id: restingpawsam        
         text: "Допустимая неплотность прилегания лап исполнительного механизма, мм: " + text55
         font.bold: true
         font.pixelSize: 16
@@ -108,7 +102,6 @@ Item {
     }
     }
     }
-
     Rectangle {
         id: rectop
         anchors.top: parent.top
@@ -126,36 +119,48 @@ Item {
             source: "/shema/" + file1 + ".jpg"
         }
     }
-
     Rectangle {
         id: vibro1
         anchors.top: rec00.bottom
-        height: baza2.height*1/2
-        width: baza2.width/4
-        //color: "red"
-        RowLayout {
+        anchors.bottom: parent.bottom
+        width: baza2.width/4        
+        Rectangle {
             id: vibro1param1
             anchors.top: parent.top
             width: parent.width
+            height: 30
+            color: "darkgray"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
             Label {
-                id: vib1par1
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Нормы вибрации, мм/с"
+                id: vib1par1                
+                text: "  Нормы вибрации"
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro1param2
             anchors.top: vibro1param1.bottom
-            anchors.topMargin: 20
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {            
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
-                id: vib1par2
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Холостой ход:"
+                id: vib1par2                
+                text: "  Холостой ход:"
                 font.bold: true
                 font.italic: true
                 font.pixelSize: 16
@@ -163,29 +168,44 @@ Item {
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro1param3
             anchors.top: vibro1param2.bottom
             width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
             Label {
-                id: vib1par3
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Норма"
+                id: vib1par3                
+                text: "  Норма"
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro1param4
             anchors.top: vibro1param3.bottom
-            anchors.topMargin: 20
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
-                id: vib1par4
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Номинальный режим:"
+                id: vib1par4                
+                text: "  Номинальный режим:"
                 font.bold: true
                 font.italic: true
                 font.pixelSize: 16
@@ -193,57 +213,88 @@ Item {
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro1param5
             anchors.top: vibro1param4.bottom
             width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
             Label {
-                id: vib1par5
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Норма"
+                id: vib1par5                
+                text: "  Норма"
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro1param6
             anchors.top: vibro1param5.bottom
             width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
             Label {
-                id: vib1par6
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Ограничение эксплуатации"
+                id: vib1par6                
+                text: "  Ограничение эксплуатации"
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro1param7
             anchors.top: vibro1param6.bottom
             width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
             Label {
-                id: vib1par7
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Отказ"
+                id: vib1par7                
+                text: "  Отказ"
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro1param8
             anchors.top: vibro1param7.bottom
-            anchors.topMargin: 20
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
-                id: vib1par8
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Рабочий диапазон:"
+                id: vib1par8                
+                text: "  Рабочий диапазон:"
                 font.bold: true
                 font.italic: true
                 font.pixelSize: 16
@@ -251,46 +302,114 @@ Item {
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro1param9
             anchors.top: vibro1param8.bottom
             width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
             Label {
-                id: vib1par9
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Норма"
+                id: vib1par9                
+                text: "  Норма"
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro1param10
             anchors.top: vibro1param9.bottom
             width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
             Label {
-                id: vib1par10
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Ограничение эксплуатации"
+                id: vib1par10                
+                text: "  Ограничение эксплуатации"
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro1param11
             anchors.top: vibro1param10.bottom
             width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
             Label {
-                id: vib1par11
-                //anchors.horizontalCenter: parent.horizontalCenter
-                text: "Отказ"
+                id: vib1par11                
+                text: "  Отказ"
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
                 wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro1param12
+            anchors.top: vibro1param11.bottom
+            anchors.topMargin: 10
+            width: parent.width
+            height: 30
+            color: "darkgrey"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+            RowLayout {
+                anchors.verticalCenter: parent.verticalCenter
+                width: parent.width
+                Label {
+                    text: "  Температуры отказа"
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
+            }
+        }
+        Rectangle {
+            id: vibro1param13
+            anchors.top: vibro1param12.bottom
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+            RowLayout {
+                anchors.verticalCenter: parent.verticalCenter
+                width: parent.width
+                Label {
+                    text: "  t, °C"
+                    font.bold: true
+                    font.pixelSize: 16
+                    width: maxWidth*2/3
+                    wrapMode: Text.WordWrap
+                }
             }
         }
     }
@@ -300,11 +419,18 @@ Item {
         anchors.top: rec00.bottom
         anchors.left: vibro1.right
         height: baza2.height*1/2
-        width: baza2.width/4
-        //color: "green"
-        RowLayout {
+        width: baza2.width/4        
+        Rectangle {
             id: vibro2param1
             anchors.top: parent.top
+            width: parent.width
+            height: 30
+            color: "darkgray"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 id: vib2par1
@@ -316,10 +442,18 @@ Item {
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro2param2
             anchors.top: vibro2param1.bottom
-            anchors.topMargin: 20
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 id: vib2par2
@@ -331,9 +465,18 @@ Item {
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro2param3
             anchors.top: vibro2param2.bottom
+            width: parent.width
+            height: 30
+            color: "limegreen"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 property string text6: "Неизвестно"
@@ -344,14 +487,21 @@ Item {
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "green"
+                wrapMode: Text.WordWrap                
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro2param4
             anchors.top: vibro2param3.bottom
-            anchors.topMargin: 20
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 id: vib2par4
@@ -363,9 +513,18 @@ Item {
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro2param5
             anchors.top: vibro2param4.bottom
+            width: parent.width
+            height: 30
+            color: "limegreen"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 property string text7: "Неизвестно"
@@ -376,13 +535,21 @@ Item {
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "green"
+                wrapMode: Text.WordWrap                
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro2param6
             anchors.top: vibro2param5.bottom
+            width: parent.width
+            height: 30
+            color: "gold"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 property string text8: "Неизвестно"
@@ -393,13 +560,21 @@ Item {
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "orange"
+                wrapMode: Text.WordWrap                
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro2param7
             anchors.top: vibro2param6.bottom
+            width: parent.width
+            height: 30
+            color: "tomato"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 property string text9: "Неизвестно"
@@ -410,14 +585,21 @@ Item {
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "red"
+                wrapMode: Text.WordWrap                
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro2param8
             anchors.top: vibro2param7.bottom
-            anchors.topMargin: 20
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 id: vib2par8
@@ -429,9 +611,18 @@ Item {
                 wrapMode: Text.WordWrap
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro2param9
             anchors.top: vibro2param8.bottom
+            width: parent.width
+            height: 30
+            color: "limegreen"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 property string text16: "Неизвестно"
@@ -442,13 +633,21 @@ Item {
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "green"
+                wrapMode: Text.WordWrap                
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro2param10
             anchors.top: vibro2param9.bottom
+            width: parent.width
+            height: 30
+            color: "gold"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 property string text17: "Неизвестно"
@@ -459,13 +658,21 @@ Item {
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "orange"
+                wrapMode: Text.WordWrap                
             }
         }
-        RowLayout {
+        }
+        Rectangle {
             id: vibro2param11
             anchors.top: vibro2param10.bottom
+            width: parent.width
+            height: 30
+            color: "tomato"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
             width: parent.width
             Label {
                 property string text18: "Неизвестно"
@@ -476,422 +683,22 @@ Item {
                 font.bold: true
                 font.pixelSize: 16
                 width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "red"
+                wrapMode: Text.WordWrap                
             }
         }
-
-    }
-
-    Rectangle {
-        id: vibro3
-        anchors.top: rec00.bottom
-        anchors.left: vibro2.right
-        height: baza2.height*1/2
-        width: baza2.width/4
-        //color: "yellow"
-        RowLayout {
-            id: vibro3param1
-            anchors.top: parent.top
-            width: parent.width
-            Label {
-                id: vib3par1
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: "Передаточный механизм"
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-            }
-        }
-        RowLayout {
-            id: vibro3param2
-            anchors.top: vibro3param1.bottom
-            anchors.topMargin: 20
-            width: parent.width
-            Label {
-                id: vib3par2
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: ""
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-            }
-        }
-        RowLayout {
-            id: vibro3param3
-            anchors.top: vibro3param2.bottom
-            width: parent.width
-            Label {
-                id: vib3par3
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: ""
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-            }
-        }
-        RowLayout {
-            id: vibro3param4
-            anchors.top: vibro3param3.bottom
-            anchors.topMargin: 20
-            width: parent.width
-            Label {
-                id: vib3par4
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: ""
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-            }
-        }
-        RowLayout {
-            id: vibro3param5
-            anchors.top: vibro3param4.bottom
-            width: parent.width
-            Label {
-                property string text10: "Неизвестно"
-                property string text1010: text10 !== "" ? text10 : "неизвестно"
-                id: nomnormtm
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text1010 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "green"
-            }
-        }
-        RowLayout {
-            id: vibro3param6
-            anchors.top: vibro3param5.bottom
-            width: parent.width
-            Label {
-                property string text11: "Неизвестно"
-                property string text1111: text11 !== "" ? text11 : "неизвестно"
-                id: nomogrtm
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text1111 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "orange"
-            }
-        }
-        RowLayout {
-            id: vibro3param7
-            anchors.top: vibro3param6.bottom
-            width: parent.width
-            Label {
-                property string text12: "Неизвестно"
-                property string text1212: text12 !== "" ? text12 : "неизвестно"
-                id: nomotkaztm
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text1212 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "red"
-            }
-        }
-        RowLayout {
-            id: vibro3param8
-            anchors.top: vibro3param7.bottom
-            anchors.topMargin: 20
-            width: parent.width
-            Label {
-                id: vib3par7
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: ""
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-            }
-        }
-        RowLayout {
-            id: vibro3param9
-            anchors.top: vibro3param8.bottom
-            width: parent.width
-            Label {
-                property string text19: "Неизвестно"
-                property string text1919: text19 !== "" ? text19 : "неизвестно"
-                id: rdnormtm
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text1919 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "green"
-            }
-        }
-        RowLayout {
-            id: vibro3param10
-            anchors.top: vibro3param9.bottom
-            width: parent.width
-            Label {
-                property string text20: "Неизвестно"
-                property string text2020: text20 !== "" ? text20 : "неизвестно"
-                id: rdogrtm
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text2020 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "orange"
-            }
-        }
-        RowLayout {
-            id: vibro3param11
-            anchors.top: vibro3param10.bottom
-            width: parent.width
-            Label {
-                property string text21: "Неизвестно"
-                property string text2121: text21 !== "" ? text21 : "неизвестно"
-                id: rdotkaztm
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text2121 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "red"
-            }
-        }
-    }
-    Rectangle {
-        id: vibro4
-        anchors.top: rec00.bottom
-        anchors.left: vibro3.right
-        height: baza2.height*1/2
-        width: baza2.width/4
-        //color: "grey"
-        RowLayout {
-            id: vibro4param1
-            anchors.top: parent.top
-            width: parent.width
-            Label {
-                id: vib4par1
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: "Исполнительный механизм"
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-            }
-        }
-        RowLayout {
-            id: vibro4param2
-            anchors.top: vibro4param1.bottom
-            anchors.topMargin: 20
-            width: parent.width
-            Label {
-                id: vib4par2
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: ""
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-            }
-        }
-        RowLayout {
-            id: vibro4param3
-            anchors.top: vibro4param2.bottom
-            width: parent.width
-            Label {
-                id: vib4par3
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: ""
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-            }
-        }
-        RowLayout {
-            id: vibro4param4
-            anchors.top: vibro4param3.bottom
-            anchors.topMargin: 20
-            width: parent.width
-            Label {
-                id: vib4par4
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: ""
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-            }
-        }
-        RowLayout {
-            id: vibro4param5
-            anchors.top: vibro4param4.bottom
-            width: parent.width
-            Label {
-                property string text13: "Неизвестно"
-                property string text1313: text13 !== "" ? text13 : "неизвестно"
-                id: nomnormam
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text1313 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "green"
-            }
-        }
-        RowLayout {
-            id: vibro4param6
-            anchors.top: vibro4param5.bottom
-            width: parent.width
-            Label {
-                property string text14: "Неизвестно"
-                property string text1414: text14 !== "" ? text14 : "неизвестно"
-                id: nomogram
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text1414 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "orange"
-            }
-        }
-        RowLayout {
-            id: vibro4param7
-            anchors.top: vibro4param6.bottom
-            width: parent.width
-            Label {
-                property string text15: "Неизвестно"
-                property string text1515: text15 !== "" ? text15 : "неизвестно"
-                id: nomotkazam
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text1515 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "red"
-            }
-        }
-        RowLayout {
-            id: vibro4param8
-            anchors.top: vibro4param7.bottom
-            anchors.topMargin: 20
-            width: parent.width
-            Label {
-                id: vib4par7
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: ""
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-            }
-        }
-        RowLayout {
-            id: vibro4param9
-            anchors.top: vibro4param8.bottom
-            width: parent.width
-            Label {
-                property string text22: "Неизвестно"
-                property string text2222: text22 !== "" ? text22 : "неизвестно"
-                id: rdnormam
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text2222 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "green"
-            }
-        }
-        RowLayout {
-            id: vibro4param10
-            anchors.top: vibro4param9.bottom
-            width: parent.width
-            Label {
-                property string text23: "Неизвестно"
-                property string text2323: text23 !== "" ? text23 : "неизвестно"
-                id: rdogram
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text2323 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "orange"
-            }
-        }
-        RowLayout {
-            id: vibro4param11
-            anchors.top: vibro4param10.bottom
-            width: parent.width
-            Label {
-                property string text24: "Неизвестно"
-                property string text2424: text24 !== "" ? text24 : "неизвестно"
-                id: rdotkazam
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: text2424 + " ед.изм."
-                font.bold: true
-                font.pixelSize: 16
-                width: maxWidth*2/3
-                wrapMode: Text.WordWrap
-                color: "red"
-            }
-        }
-    }
-
-        Rectangle {
-            id: temper1
-            anchors.top: vibro1.bottom
-            //anchors.topMargin: 20
-            width: baza2.width/4
-            anchors.bottom: parent.bottom
-            //color: "blue"
-            RowLayout {
-                id: temp1par1
-                anchors.top: parent.top
-                Label {                    
-                    text: "Температура отказа"
-                    font.bold: true
-                    font.pixelSize: 16
-                    width: maxWidth*2/3
-                    wrapMode: Text.WordWrap
-                }
-            }
-            RowLayout {
-                id: temp1par2
-                anchors.top: temp1par1.bottom
-                anchors.topMargin: 20
-                Label {
-                    text: "t, °C"
-                    font.bold: true
-                    font.pixelSize: 16
-                    width: maxWidth*2/3
-                    wrapMode: Text.WordWrap
-                }
-            }
         }
         Rectangle {
-            id: temper2
-            anchors.top: vibro1.bottom
-            //anchors.topMargin: 20
-            width: baza2.width/4
-            anchors.bottom: parent.bottom
-            anchors.left: temper1.right
-            //color: "red"
+            id: vibro2param12
+            anchors.top: vibro2param11.bottom
+            anchors.topMargin: 10
+            width: parent.width
+            height: 30
+            color: "darkgrey"
+            border.width: 1
+            border.color: "white"
+            radius: 10
             RowLayout {
-                id: temp2par1
-                anchors.top: parent.top
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 Label {
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -902,10 +709,18 @@ Item {
                     wrapMode: Text.WordWrap
                 }
             }
+        }
+        Rectangle {
+            id: temp2par2
+            anchors.top: vibro2param12.bottom
+            width: parent.width
+            height: 30
+            color: "tomato"
+            border.width: 1
+            border.color: "white"
+            radius: 10
             RowLayout {
-                id: temp2par2
-                anchors.top: temp2par1.bottom
-                anchors.topMargin: 20
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 Label {
                     property string text25: "Неизвестно"
@@ -917,21 +732,294 @@ Item {
                     font.pixelSize: 16
                     width: maxWidth*2/3
                     wrapMode: Text.WordWrap
-                    color: "red"
                 }
             }
         }
+    }
+    Rectangle {
+        id: vibro3
+        anchors.top: rec00.bottom
+        anchors.left: vibro2.right
+        height: baza2.height*1/2
+        width: baza2.width/4        
         Rectangle {
-            id: temper3
-            anchors.top: vibro1.bottom
+            id: vibro3param1
+            anchors.top: parent.top
+            width: parent.width
+            height: 30
+            color: "darkgray"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                id: vib3par1
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: "Передаточный механизм"
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param2
+            anchors.top: vibro3param1.bottom
             //anchors.topMargin: 20
-            width: baza2.width/4
-            anchors.bottom: parent.bottom
-            anchors.left: temper2.right
-            //color: "red"
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                id: vib3par2
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: ""
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param3
+            anchors.top: vibro3param2.bottom
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                id: vib3par3
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: ""
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param4
+            anchors.top: vibro3param3.bottom
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                id: vib3par4
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: ""
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param5
+            anchors.top: vibro3param4.bottom
+            width: parent.width
+            height: 30
+            color: "limegreen"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text10: "Неизвестно"
+                property string text1010: text10 !== "" ? text10 : "неизвестно"
+                id: nomnormtm
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text1010 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param6
+            anchors.top: vibro3param5.bottom
+            width: parent.width
+            height: 30
+            color: "gold"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text11: "Неизвестно"
+                property string text1111: text11 !== "" ? text11 : "неизвестно"
+                id: nomogrtm
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text1111 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param7
+            anchors.top: vibro3param6.bottom
+            width: parent.width
+            height: 30
+            color: "tomato"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text12: "Неизвестно"
+                property string text1212: text12 !== "" ? text12 : "неизвестно"
+                id: nomotkaztm
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text1212 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param8
+            anchors.top: vibro3param7.bottom
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                id: vib3par7
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: ""
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param9
+            anchors.top: vibro3param8.bottom
+            width: parent.width
+            height: 30
+            color: "limegreen"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text19: "Неизвестно"
+                property string text1919: text19 !== "" ? text19 : "неизвестно"
+                id: rdnormtm
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text1919 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param10
+            anchors.top: vibro3param9.bottom
+            width: parent.width
+            height: 30
+            color: "gold"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text20: "Неизвестно"
+                property string text2020: text20 !== "" ? text20 : "неизвестно"
+                id: rdogrtm
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text2020 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param11
+            anchors.top: vibro3param10.bottom
+            width: parent.width
+            height: 30
+            color: "tomato"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text21: "Неизвестно"
+                property string text2121: text21 !== "" ? text21 : "неизвестно"
+                id: rdotkaztm
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text2121 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro3param12
+            anchors.top: vibro3param11.bottom
+            anchors.topMargin: 10
+            width: parent.width
+            height: 30
+            color: "darkgrey"
+            border.width: 1
+            border.color: "white"
+            radius: 10
             RowLayout {
-                id: temp3par1
-                anchors.top: parent.top
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 Label {
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -942,10 +1030,18 @@ Item {
                     wrapMode: Text.WordWrap
                 }
             }
+        }
+        Rectangle {
+            id: temp3par2
+            anchors.top: vibro3param12.bottom
+            width: parent.width
+            height: 30
+            color: "tomato"
+            border.width: 1
+            border.color: "white"
+            radius: 10
             RowLayout {
-                id: temp3par2
-                anchors.top: temp3par1.bottom
-                anchors.topMargin: 20
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 Label {
                     property string text26: "Неизвестно"
@@ -957,21 +1053,293 @@ Item {
                     font.pixelSize: 16
                     width: maxWidth*2/3
                     wrapMode: Text.WordWrap
-                    color: "red"
                 }
             }
         }
+    }
+    Rectangle {
+        id: vibro4
+        anchors.top: rec00.bottom
+        anchors.left: vibro3.right
+        height: baza2.height*1/2
+        width: baza2.width/4        
         Rectangle {
-            id: temper4
-            anchors.top: vibro1.bottom
-            //anchors.topMargin: 20
-            width: baza2.width/4
-            anchors.bottom: parent.bottom
-            anchors.left: temper3.right
-            //color: "red"
+            id: vibro4param1
+            anchors.top: parent.top
+            width: parent.width
+            height: 30
+            color: "darkgray"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                id: vib4par1
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: "Исполнительный механизм"
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param2
+            anchors.top: vibro4param1.bottom
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                id: vib4par2
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: ""
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param3
+            anchors.top: vibro4param2.bottom
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                id: vib4par3
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: ""
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param4
+            anchors.top: vibro4param3.bottom
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                id: vib4par4
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: ""
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param5
+            anchors.top: vibro4param4.bottom
+            width: parent.width
+            height: 30
+            color: "limegreen"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text13: "Неизвестно"
+                property string text1313: text13 !== "" ? text13 : "неизвестно"
+                id: nomnormam
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text1313 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param6
+            anchors.top: vibro4param5.bottom
+            width: parent.width
+            height: 30
+            color: "gold"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text14: "Неизвестно"
+                property string text1414: text14 !== "" ? text14 : "неизвестно"
+                id: nomogram
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text1414 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param7
+            anchors.top: vibro4param6.bottom
+            width: parent.width
+            height: 30
+            color: "tomato"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text15: "Неизвестно"
+                property string text1515: text15 !== "" ? text15 : "неизвестно"
+                id: nomotkazam
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text1515 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param8
+            anchors.top: vibro4param7.bottom
+            width: parent.width
+            height: 30
+            color: "silver"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                id: vib4par7
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: ""
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param9
+            anchors.top: vibro4param8.bottom
+            width: parent.width
+            height: 30
+            color: "limegreen"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text22: "Неизвестно"
+                property string text2222: text22 !== "" ? text22 : "неизвестно"
+                id: rdnormam
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text2222 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param10
+            anchors.top: vibro4param9.bottom
+            width: parent.width
+            height: 30
+            color: "gold"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text23: "Неизвестно"
+                property string text2323: text23 !== "" ? text23 : "неизвестно"
+                id: rdogram
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text2323 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param11
+            anchors.top: vibro4param10.bottom
+            width: parent.width
+            height: 30
+            color: "tomato"
+            border.width: 1
+            border.color: "white"
+            radius: 10
+        RowLayout {
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.width
+            Label {
+                property string text24: "Неизвестно"
+                property string text2424: text24 !== "" ? text24 : "неизвестно"
+                id: rdotkazam
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: text2424 + " ед.изм."
+                font.bold: true
+                font.pixelSize: 16
+                width: maxWidth*2/3
+                wrapMode: Text.WordWrap                
+            }
+        }
+        }
+        Rectangle {
+            id: vibro4param12
+            anchors.top: vibro4param11.bottom
+            anchors.topMargin: 10
+            width: parent.width
+            height: 30
+            color: "darkgrey"
+            border.width: 1
+            border.color: "white"
+            radius: 10
             RowLayout {
-                id: temp4par1
-                anchors.top: parent.top
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 Label {
                     anchors.horizontalCenter: parent.horizontalCenter
@@ -982,10 +1350,18 @@ Item {
                     wrapMode: Text.WordWrap
                 }
             }
+        }
+        Rectangle {
+            id: temp4par2
+            anchors.top: vibro4param12.bottom
+            width: parent.width
+            height: 30
+            color: "tomato"
+            border.width: 1
+            border.color: "white"
+            radius: 10
             RowLayout {
-                id: temp4par2
-                anchors.top: temp4par1.bottom
-                anchors.topMargin: 20
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 Label {
                     property string text27: "Неизвестно"
@@ -997,12 +1373,10 @@ Item {
                     font.pixelSize: 16
                     width: maxWidth*2/3
                     wrapMode: Text.WordWrap
-                    color: "red"
                 }
             }
         }
-
-
+    }
     Component.onCompleted: {
         mapper.addMapping(identifier, (0x0100 + 2), "text")
         mapper.addMapping(radialalign, (0x0100 + 27), "text1")
