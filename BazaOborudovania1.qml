@@ -403,44 +403,82 @@ Item {
             width: maxWidth*2/3
             anchors.bottom: parent.bottom
             //color: "red"
-            Row {
+            Rectangle {
                 id: row1param1
                 anchors.top: parent.top
+                width: parent.width
+                height: 30
+                color: "darkgrey"
+                border.width: 1
+                border.color: "white"
+                radius: 10
+            RowLayout {
+                //id: row1param1
+                //anchors.top: parent.top
                 //anchors.topMargin: 20
+                anchors.verticalCenter: parent.verticalCenter
+                width: parent.width
                 Label {
                     id: label1
-                    text: "Тенологические параметры"
+                    text: "  Тенологические параметры"
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3
                     wrapMode: Text.WordWrap
                 }
             }
-            Row {
+            }
+            Rectangle {
                 id: row2param1
                 anchors.top: row1param1.bottom
-                anchors.topMargin: 20
+                //anchors.topMargin: 20
+                width: parent.width
+                height: 30
+                color: "silver"
+                border.width: 1
+                border.color: "white"
+                radius: 10
+            RowLayout {
+//                id: row2param1
+//                anchors.top: row1param1.bottom
+//                anchors.topMargin: 20
+                anchors.verticalCenter: parent.verticalCenter
+                width: parent.width
                 Label {
                     id: label2
-                    text: "Расход: "
+                    text: "  Расход: "
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3
                     wrapMode: Text.WordWrap
                 }
             }
-            Row {
+            }
+            Rectangle {
                 id: row3param1
                 anchors.top: row2param1.bottom
-                anchors.topMargin: 20
+                //anchors.topMargin: 20
+                width: parent.width
+                height: 30
+                color: "silver"
+                border.width: 1
+                border.color: "white"
+                radius: 10
+            RowLayout {
+//                id: row3param1
+//                anchors.top: row2param1.bottom
+//                anchors.topMargin: 20
+                anchors.verticalCenter: parent.verticalCenter
+                width: parent.width
                 Label {
                     id: label3
-                    text: "Давление: "
+                    text: "  Давление: "
                     font.bold: true
                     font.pixelSize: 16
                     width: maxWidth*2/3
                     wrapMode: Text.WordWrap
                 }
+            }
             }
         }
         Rectangle {
@@ -451,9 +489,19 @@ Item {
             width: baza1.width/3
             anchors.bottom: parent.bottom
             //color: "blue"
-            RowLayout {
+            Rectangle {
                 id: row1param2
                 anchors.top: parent.top
+                width: parent.width
+                height: 30
+                color: "darkgrey"
+                border.width: 1
+                border.color: "white"
+                radius: 10
+            RowLayout {
+//                id: row1param2
+//                anchors.top: parent.top
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 //anchors.topMargin: 20
                 Label {
@@ -466,11 +514,24 @@ Item {
                     wrapMode: Text.WordWrap
                 }
             }
-            RowLayout {
+            }
+            Rectangle {
                 id: row2param2
                 anchors.top: row1param2.bottom
-                anchors.topMargin: 20
+                //anchors.topMargin: 20
                 width: parent.width
+                height: 30
+                color: "limegreen"
+                border.width: 1
+                border.color: "white"
+                radius: 10
+            RowLayout {
+//                id: row2param2
+//                anchors.top: row1param2.bottom
+//                anchors.topMargin: 20
+                anchors.verticalCenter: parent.verticalCenter
+                width: parent.width
+                //width: parent.width
                 Label {
                     property string text13: "Неизвестно"
                     property string text1313: text13 !== "" ? text13 : "неизвестно"
@@ -483,10 +544,22 @@ Item {
                     wrapMode: Text.WordWrap
                 }
             }
-            RowLayout {
+            }
+            Rectangle {
                 id: row3param2
                 anchors.top: row2param2.bottom
-                anchors.topMargin: 20
+                //anchors.topMargin: 20
+                width: parent.width
+                height: 30
+                color: "limegreen"
+                border.width: 1
+                border.color: "white"
+                radius: 10
+            RowLayout {
+//                id: row3param2
+//                anchors.top: row2param2.bottom
+//                anchors.topMargin: 20
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 Label {
                     property string text15: "Неизвестно"
@@ -500,6 +573,7 @@ Item {
                     wrapMode: Text.WordWrap
                 }
             }
+            }
         }
         Rectangle {
             id: param3
@@ -509,9 +583,19 @@ Item {
             width: baza1.width/3
             anchors.bottom: parent.bottom
             //color: "green"
-            RowLayout {
+            Rectangle {
                 id: row1param3
                 anchors.top: parent.top
+                width: parent.width
+                height: 30
+                color: "darkgrey"
+                border.width: 1
+                border.color: "white"
+                radius: 10
+            RowLayout {
+//                id: row1param3
+//                anchors.top: parent.top
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 //anchors.topMargin: 20
                 Label {
@@ -524,10 +608,22 @@ Item {
                     wrapMode: Text.WordWrap
                 }
             }
-            RowLayout {
+            }
+            Rectangle {
                 id: row2param3
                 anchors.top: row1param3.bottom
-                anchors.topMargin: 20
+                //anchors.topMargin: 20
+                width: parent.width
+                height: 30
+                color: "gold"
+                border.width: 1
+                border.color: "white"
+                radius: 10
+            RowLayout {
+//                id: row2param3
+//                anchors.top: row1param3.bottom
+//                anchors.topMargin: 20
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 Label {
                     property string text14: "Неизвестно"
@@ -541,10 +637,22 @@ Item {
                     wrapMode: Text.WordWrap
                 }
             }
-            RowLayout {
+            }
+            Rectangle {
                 id: row3param3
                 anchors.top: row2param3.bottom
-                anchors.topMargin: 20
+                //anchors.topMargin: 20
+                width: parent.width
+                height: 30
+                color: "gold"
+                border.width: 1
+                border.color: "white"
+                radius: 10
+            RowLayout {
+//                id: row3param3
+//                anchors.top: row2param3.bottom
+//                anchors.topMargin: 20
+                anchors.verticalCenter: parent.verticalCenter
                 width: parent.width
                 Label {
                     property string text16: "Неизвестно"
@@ -558,8 +666,8 @@ Item {
                     wrapMode: Text.WordWrap
                 }
             }
+            }
         }
-
     }
 
 //    Label {
